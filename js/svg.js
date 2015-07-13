@@ -74,11 +74,6 @@ $(document).ready(function() {
 	dashArray[24] = $('#intro_blue_3').attr('stroke-dashoffset');
 	dashArray[25] = $('#intro_dark_3').attr('stroke-dashoffset');
 
-	dashArray[26] = $('#about_left_2').attr('stroke-dashoffset');
-	dashArray[28] = $('#about_out_1').attr('stroke-dashoffset');
-	dashArray[29] = $('#about_right_2').attr('stroke-dashoffset');
-	dashArray[30] = $('#about_out_3').attr('stroke-dashoffset');
-
 // Header SVG
  	// Animate left section
 	setTimeout(function(){
@@ -134,7 +129,7 @@ $(document).ready(function() {
 			}, 1000);
 		}, 1400);
 
-	}, 2000);
+	}, 1000);
 	// Animate right section
 	setTimeout(function(){
 
@@ -190,7 +185,7 @@ $(document).ready(function() {
 			}, 1000);
 		}, 1400);
 
-	}, 2000);
+	}, 1000);
 
 	// Animate mid section
 	setTimeout(function(){
@@ -227,7 +222,7 @@ $(document).ready(function() {
 			    });
 			}, 1000);
 		}, 1300);
-	}, 2000);
+	}, 1000);
 
 	// Animate right section
 	setTimeout(function(){
@@ -249,7 +244,7 @@ $(document).ready(function() {
 			    });
 			}, 1000);
 		}, 1300);
-	}, 2000);
+	}, 1000);
 
 	// Animate mid section
 	setTimeout(function(){
@@ -265,37 +260,6 @@ $(document).ready(function() {
 		}, 1000);
 	}, 2000);
 
-// About SVG
-	// Animate left section
-	setTimeout(function(){
-		Snap.animate(dashArray[26], 0, function (val) {
-		    $('#about_left_2').attr({
-		        'stroke-dashoffset': val
-		    });
-		}, 300);
-		setTimeout(function(){
-			Snap.animate(dashArray[28], 0, function (val) {
-			    $('#about_out_1').attr({
-			        'stroke-dashoffset': val
-			    });
-			}, 1000);
-		}, 300);
-	}, 3000);
 
-	// Animate right section
-	setTimeout(function(){
-		Snap.animate(dashArray[29], 0, function (val) {
-		    $('#about_right_2').attr({
-		        'stroke-dashoffset': val
-		    });
-		}, 300);
-		setTimeout(function(){
-			Snap.animate(dashArray[30], 0, function (val) {
-			    $('#about_out_3').attr({
-			        'stroke-dashoffset': val
-			    });
-			}, 1000);
-		}, 300);
-	}, 3000);
 
 });
