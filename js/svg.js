@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
 // Get width of SVG path
-	// var path = document.querySelector('#about_left_3');
-	// var length = path.getTotalLength();
-	// console.log(length);
+	var path = document.querySelector('#hexa_left_1_1');
+	var length = path.getTotalLength();
+	console.log(length);
 
 	// get SVG attributes for animation
 	function AnimateSVG() {
@@ -28,17 +28,27 @@ $(document).ready(function() {
 
 	$('.svg-inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
 		if (isInView) {
-				if (visiblePartY == 'top') {
+			if (visiblePartY == 'top') {
+				// top part of element is visible
 				_thisSVG = $(this);
-				AnimateSVG();
+				if (!$(this).hasClass('is-visible')) {
+					AnimateSVG();
+					$(_thisSVG).addClass('is-visible');
+				};
 			} else if (visiblePartY == 'bottom') {
 				// bottom part of element is visible
 				_thisSVG = $(this);
-				AnimateSVG();
+				if (!$(this).hasClass('is-visible')) {
+					AnimateSVG();
+					$(_thisSVG).addClass('is-visible');
+				};
 			} else {
 				// whole part of element is visible
 				_thisSVG = $(this);
-				AnimateSVG();
+				if (!$(this).hasClass('is-visible')) {
+					AnimateSVG();
+					$(_thisSVG).addClass('is-visible');
+				};
 			}
 		} else {
 			// element has gone out of viewport
