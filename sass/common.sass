@@ -25,6 +25,10 @@ $blue: #4675b8
 /*-------------------------------------------------------------------------*/
 /*----------------------------- MAIN STYLES -------------------------------*/
 /*-------------------------------------------------------------------------*/
+svg
+	display: block
+	width: 100%
+	height: 100%
 /* Fix menu none-adaptive */
 .nav-justified
 	> li
@@ -95,19 +99,19 @@ $blue: #4675b8
 /* SVG lines */
 .svg-header__in
 	position: relative
-	#header_line_left
+	.header_line_left
 		position: absolute
 		top: 52px
 		left: 0
 		width: 485px
 		height: 125px
-	#header_line_right
+	.header_line_right
 		position: absolute
 		top: 52px
 		left: 485px
 		width: 485px
 		height: 125px
-	#header_line_mid
+	.header_line_mid
 		position: absolute
 		top: 52px
 		left: 482px
@@ -116,13 +120,13 @@ $blue: #4675b8
 .svg-header
 	position: relative
 	height: 200px
-	#header_left_out
+	.header_left_out
 		position: absolute
 		top: 54px
 		left: 0
 		width: calc(50% - 484px)
 		height: 17px
-	#header_right_out
+	.header_right_out
 		position: absolute
 		top: 54px
 		right: 0
@@ -156,19 +160,19 @@ $blue: #4675b8
 					line-height: 45px
 .svg-intro__in
 	position: relative
-	#intro_line_left
+	.intro_line_left
 		position: absolute
 		top: 120px
 		left: 0
 		width: 485px
 		height: 300px
-	#intro_line_right
+	.intro_line_right
 		position: absolute
 		top: 120px
 		left: 485px
 		width: 485px
 		height: 300px
-	#intro_line_mid
+	.intro_line_mid
 		position: absolute
 		top: 120px
 		left: 482px
@@ -176,13 +180,13 @@ $blue: #4675b8
 		height: 290px
 .svg-intro
 	position: relative
-	#intro_left_out
+	.intro_left_out
 		position: absolute
 		top: 401px
 		left: 0
 		width: calc(50% - 484px)
 		height: 2px
-	#intro_right_out
+	.intro_right_out
 		position: absolute
 		top: 401px
 		right: 0
@@ -201,6 +205,74 @@ $blue: #4675b8
 	background-color: $black-dark
 	border-top: 14px solid $blue
 	border-bottom: 14px solid $blue
+	&__inner
+		padding: 0 15px
+.svg-about
+	position: relative
+	.about_left_out_1
+		position: absolute
+		top: -30px
+		left: 0
+		width: calc(50% - 484px)
+		height: 2px
+	.about_left_out_2
+		position: absolute
+		bottom: -30px
+		left: 0
+		width: calc(50% - 484px)
+		height: 2px
+	.about_right_out_1
+		position: absolute
+		top: -30px
+		right: 0
+		width: calc(50% - 484px)
+		height: 2px
+	.about_right_out_2
+		position: absolute
+		bottom: -30px
+		right: 0
+		width: calc(50% - 484px)
+		height: 2px
+.svg-about__in
+	position: relative
+	padding-top: 30px
+	padding-bottom: 30px
+	.about_line_left_1
+		position: absolute
+		top: 0
+		left: 89px
+		width: 2px
+		height: 100%
+	.about_line_left_2
+		position: absolute
+		top: -30px
+		left: 0
+		width: 90px
+		height: 30px
+	.about_line_left_3
+		position: absolute
+		bottom: -30px
+		left: 0
+		width: 90px
+		height: 30px
+	.about_line_right_1
+		position: absolute
+		top: 0
+		right: 89px
+		width: 2px
+		height: 100%
+	.about_line_right_2
+		position: absolute
+		top: -30px
+		right: 0
+		width: 90px
+		height: 30px
+	.about_line_right_3
+		position: absolute
+		bottom: -30px
+		right: 0
+		width: 90px
+		height: 30px
 .portfolio
 	position: relative
 	padding-top: 50px
