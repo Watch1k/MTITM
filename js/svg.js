@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 // Get width of SVG path
-	var path = document.querySelector('#hexa_left_1_1');
+	var path = document.querySelector('#hexa_left_4_1');
 	var length = path.getTotalLength();
 	console.log(length);
 
