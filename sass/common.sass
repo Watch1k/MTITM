@@ -340,12 +340,15 @@ svg
 		color: $black-dark
 		line-height: 66px
 .pf-slider-for
+	position: relative
+	z-index: 3
 	margin: 73px auto 0
 	width: 683px
 	font-family: $helvetica
 	font-size: 14px
 	color: $black-dark
 	letter-spacing: 0.02em
+	text-transform: uppercase
 	.slick-prev, .slick-next
 		background-color: $black-dark
 	.slick-prev
@@ -353,24 +356,66 @@ svg
 	.slick-next
 		right: -100px
 	.slick-slide
+		position: relative
 		text-align: center
-		.slide-wrap
-			display: block
+		height: 100px
+		.pf-category
+			z-index: 6
+			position: absolute
+			display: table
+			top: 0
+			width: 100%
+			height: 100%
+			text-align: center
+			p
+				display: table-cell
+				vertical-align: middle
 .pf-slider
 	margin: 50px auto 0
 	width: 866px
 .pf-slide__in
-	img
-		width: 100%
+	position: relative
+	overflow: hidden
+	height: 312px
+	vertical-align: bottom
+	.pf-text
+		display: table-cell
+		padding-left: 20px
+		padding-right: 20px
+		position: relative
+		z-index: 3
+		top: -312px
+		height: 312px
+		left: 0
+		font-family: $gothic
+		font-size: 16px
+		color: #fff
+		line-height: 20px
+		letter-spacing: 0.02em
+		text-align: center
+		vertical-align: middle
+		&__strong
+			font-family: $helvetica-m
+			font-size: 20px
+			line-height: 36px
+.pf-slide
+	> .row
+		position: relative
+		& + .row
+			position: relative
+			top: -50px
 .pf-info
-	margin: 50px auto 0
+	position: relative
+	z-index: 2
+	margin: -50px auto 0
 	width: 553px
-	padding: 20px
+	padding: 100px 20px 20px 20px
 	font-family: $default-fonts
 	font-size: 16px
 	color: #fff
 	line-height: 20px
 	background-color: $black-dark
+	border-top: 2px solid $blue
 	> li
 		display: none
 		height: 100%

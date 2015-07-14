@@ -31,10 +31,11 @@ $(document).ready(function(){
 	$('.pf-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		asNavFor: '.pf-slider-for'
+		asNavFor: '.pf-slider-for',
+		fade: true
 	});
 	$('.pf-slider-for').slick({
-		slidesToShow: 5,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		focusOnSelect: true,
 		autoplay: false,
@@ -42,7 +43,7 @@ $(document).ready(function(){
 		swipe: true,
 		arrows: true,
 		centerMode: true,
-		centerPadding: 0
+		centerPadding: '136px'
 	});
 
 	// function sliderButtons(){
@@ -52,9 +53,9 @@ $(document).ready(function(){
 	// sliderButtons();
 
 	// change portfolio info blocks
-	$('.pf-slider-for').on('afterChange', function(event, slick, direction){
+	$('.pf-slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 		$('.pf-info > li').removeClass('active');
-		$('.pf-info > li').eq(direction).addClass('active');
+		$('.pf-info > li').eq(nextSlide).addClass('active');
 	});
 
 	//Equal heights portfolio info blocks.
@@ -66,10 +67,8 @@ $(document).ready(function(){
 		if (infoHeight > infoHeightMax) {
 			infoHeightMax = infoHeight;
 		};
-		console.log('infoHeight = '+ infoHeight);
-		console.log('infoHeightMax = '+ infoHeightMax);
 	});
-	infoHeightMax += 40;
+	infoHeightMax += 120;
 	$('.pf-info > li').removeClass('active');
 	$('.pf-info > li').eq(0).addClass('active');
 	$('.pf-info').css('height', infoHeightMax);

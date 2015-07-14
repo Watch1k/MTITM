@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
 // // Get width of SVG path
-// 	var path = document.querySelector('#hexa_left_4_1');
-// 	var length = path.getTotalLength();
-// 	console.log(length);
+	// var path = document.querySelector('#pf_test');
+	// var length = path.getTotalLength();
+	// console.log(length);
 
 	// get SVG attributes for animation
 	function AnimateSVG() {
