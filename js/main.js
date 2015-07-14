@@ -28,11 +28,22 @@ $(document).ready(function(){
 	new WOW().init();
 
 // Slick slider
+	$('.pf-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.pf-slider-for'
+	});
 	$('.pf-slider-for').slick({
 		slidesToShow: 5,
 		slidesToScroll: 1,
-		asNavFor: '.pf-slider'
-	})
+		focusOnSelect: true,
+		autoplay: false,
+		asNavFor: '.pf-slider',
+		swipe: true,
+		arrows: true,
+		centerMode: true,
+		centerPadding: 0
+	});
 
 	// function sliderButtons(){
 	// 	$('.pf-slider .slick-prev').prepend("<i class='slider-nav icon-chevron-thin-left'></div>");
