@@ -52,10 +52,16 @@ $(document).ready(function(){
 	// }
 	// sliderButtons();
 
-	// change portfolio info blocks
+	$('.pf-slider-for .slick-center').addClass('slick-scale');
+	// change portfolio info blocks & scale slides
 	$('.pf-slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		$('.pf-slider-for .slick-center').removeClass('slick-scale');
 		$('.pf-info > li').removeClass('active');
 		$('.pf-info > li').eq(nextSlide).addClass('active');
+	});
+
+	$('.pf-slider-for').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		$('.pf-slider-for .slick-center').addClass('slick-scale');
 	});
 
 	//Equal heights portfolio info blocks.
