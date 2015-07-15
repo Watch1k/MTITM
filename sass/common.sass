@@ -413,6 +413,18 @@ svg
 .pf-slider
 	margin: 50px auto 0
 	width: 866px
+	polygon
+		stroke-dasharray: 820,130
+	.poly__full
+		polygon
+			stroke-dasharray: 950
+			stroke-dashoffset: 0
+	.poly__right__bot
+		polygon
+			stroke-dashoffset: 627
+	.poly__left__top
+		polygon
+			stroke-dashoffset: 153
 .pf-slide__in
 	position: relative
 	overflow: hidden
@@ -469,3 +481,13 @@ svg
 			p
 				display: table-cell
 				vertical-align: bottom
+/* Reset fancybox styles */
+.fancybox-wrap, .fancybox-wrap *
+	box-sizing: content-box
+.fancybox-wrap
+	.fancybox-title
+		padding: 0 10px
+		font-family: $gothic
+		letter-spacing: 0.02em
+		font-size: 14px
+		background-color: rgba(0,0,0,0.2)

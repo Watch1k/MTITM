@@ -79,6 +79,29 @@ $(document).ready(function(){
 	$('.pf-info > li').eq(0).addClass('active');
 	$('.pf-info').css('height', infoHeightMax);
 
+// Fancybox portfolio
+	$(".pf-fancybox").fancybox({
+		theme: 'light',
+		padding: 5,
+		openEffect	: 'drop',
+		closeEffect	: 'drop',
+		prevEffect: 'none',
+		nextEffect: 'none',
+		caption : {
+			type : 'outside'
+		},
+		locked: false,
+		locale: 'ru',
+		locales: {
+			'ru': {
+				CLOSE: 'закрыть',
+				NEXT: 'вперед',
+				PREV: 'назад',
+				EXPAND: 'показать в полном размере'
+			}
+		}
+	});
+
 // 60fps scrolling
 	var body = document.body,
 	timer;
