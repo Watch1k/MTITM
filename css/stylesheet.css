@@ -31,6 +31,9 @@
 .icon-chevron-thin-right:before {
     content: "\e601";
 }
+.icon-cross:before {
+    content: "\e602";
+}
 
 
 
