@@ -115,12 +115,23 @@ svg { display: block; width: 100%; height: 100%; }
 
 .pf-slider-for { position: relative; z-index: 3; margin: 70px auto 0; width: 720px; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 14px; color: #181818; letter-spacing: 0.02em; text-transform: uppercase; }
 .pf-slider-for .slick-track { padding: 30px 0; }
-.pf-slider-for .slick-prev, .pf-slider-for .slick-next { background-color: #181818; }
-.pf-slider-for .slick-prev { left: -100px; }
-.pf-slider-for .slick-next { right: -100px; }
+.pf-slider-for .slick-prev, .pf-slider-for .slick-next { padding-left: 22px; margin-top: -20px; height: 40px; }
+.pf-slider-for .slick-prev span, .pf-slider-for .slick-next span { display: table-cell; vertical-align: middle; height: 40px; font-size: 29px; -webkit-transition: all 0.3s; transition: all 0.3s; text-align: center; }
+.pf-slider-for .slick-prev .icon-blue, .pf-slider-for .slick-next .icon-blue { color: #4675b8; }
+.pf-slider-for .slick-prev .icon-dark, .pf-slider-for .slick-next .icon-dark { color: #1d1d1d; }
+.pf-slider-for .slick-prev:hover span, .pf-slider-for .slick-next:hover span { -webkit-transform: scale(1.5, 1.5); -ms-transform: scale(1.5, 1.5); transform: scale(1.5, 1.5); -webkit-transition: all 0.3s; transition: all 0.3s; }
+.pf-slider-for .slick-prev { left: -107px; }
+.pf-slider-for .slick-prev:before { content: none; }
+.pf-slider-for .slick-prev .icon-blue { position: relative; left: -22px; margin-left: -22px; }
+.pf-slider-for .slick-next { right: -50px; }
+.pf-slider-for .slick-next:before { content: none; }
+.pf-slider-for .slick-next .icon-dark { position: relative; left: -22px; margin-left: -22px; }
 .pf-slider-for .slick-slide { position: relative; text-align: center; height: 100px; cursor: pointer; -webkit-transition: all 0.7s; transition: all 0.7s; stroke-width: 2; }
 .pf-slider-for .slick-slide.slick-scale { -webkit-transform: scale(1.5, 1.5); -ms-transform: scale(1.5, 1.5); transform: scale(1.5, 1.5); -webkit-transition: all 0.7s; transition: all 0.7s; }
 .pf-slider-for .slick-slide.slick-scale polygon { stroke-width: 1.3; }
+.pf-slider-for .slick-slide polygon { fill: #fff; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.pf-slider-for .slick-slide:hover { color: #fff; -webkit-transition: all 0.4s; transition: all 0.4s; }
+.pf-slider-for .slick-slide:hover polygon { fill: #4675b8; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .pf-slider-for .slick-slide .pf-category { position: relative; padding-left: 34px; padding-right: 34px; z-index: 6; top: -100px; left: 0; height: 100%; width: 100%; }
 .pf-slider-for .slick-slide .pf-category__in { display: table-cell; height: 100px; width: 90px; vertical-align: middle; }
 .pf-slider-for .slick-slide .pf-category__in span { font-size: 10px; }
@@ -133,6 +144,10 @@ svg { display: block; width: 100%; height: 100%; }
 .pf-slider .poly__left__top polygon { stroke-dashoffset: 153; }
 
 .pf-slide__in { position: relative; overflow: hidden; height: 312px; vertical-align: bottom; }
+.pf-slide__in svg + svg { position: absolute; top: 0; fill: rgba(70, 117, 184, 0); -webkit-transition: all 0.5s; transition: all 0.5s; }
+.pf-slide__in svg + svg text { fill: rgba(255, 255, 255, 0); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); -webkit-transition: fill 0.5s; transition: fill 0.5s; }
+.pf-slide__in:hover svg + svg { fill: rgba(70, 117, 184, 0.5); -webkit-transition: all 0.5s; transition: all 0.5s; }
+.pf-slide__in:hover svg + svg text { fill: white; -webkit-transition: fill 0.5s; transition: fill 0.5s; }
 .pf-slide__in .pf-text { display: table-cell; padding-left: 20px; padding-right: 20px; position: relative; z-index: 3; top: -312px; height: 312px; left: 0; font-family: "CenturyGothic", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; text-align: center; vertical-align: middle; }
 .pf-slide__in .pf-text__strong { font-family: "HelveticaNeueCyr-Medium", Arial, sans-serif; font-size: 20px; line-height: 36px; }
 .pf-slide__in polygon { stoke-width: 2; stroke: #4675b8; }

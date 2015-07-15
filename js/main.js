@@ -43,7 +43,9 @@ $(document).ready(function(){
 		swipe: true,
 		arrows: true,
 		centerMode: true,
-		centerPadding: '136px'
+		centerPadding: '136px',
+		nextArrow: '<div class="slick-next"><span class="icon-chevron-thin-right icon-blue"></span><span class="icon-chevron-thin-right icon-dark"></span></div>',
+		prevArrow: '<div class="slick-prev"><span class="icon-chevron-thin-left icon-dark"></span><span class="icon-chevron-thin-left icon-blue"></span></div>'
 	});
 
 	// function sliderButtons(){
