@@ -65,6 +65,7 @@ $(document).ready(function(){
 	// show slide onClick
 	$('.pf-slider-for .slick-slide').on('click', function(){
 		$('.pf-slider').slideDown('slow');
+		$('.pf-slider').get(0).slick.setPosition(); // fix for display none
 		$('.slider-close').fadeIn('slow');
 		$('.portfolio_mid_3').addClass('active');
 	});
