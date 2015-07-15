@@ -327,7 +327,7 @@ svg
 		height: 30px
 .portfolio
 	position: relative
-	padding-top: 70px
+	padding-top: 50px
 	padding-bottom: 170px
 	font-family: $gothic
 	font-size: 16px
@@ -343,10 +343,10 @@ svg
 		position: relative
 		.portfolio_mid_1
 			position: absolute
-			top: -70px
+			top: -50px
 			left: calc(50% - 1px)
 			width: 2px
-			height: 70px
+			height: 50px
 		.portfolio_mid_2
 			position: absolute
 			top: 70px
@@ -355,10 +355,14 @@ svg
 			height: 150px
 		.portfolio_mid_3
 			position: absolute
-			bottom: -70px
+			bottom: 0
 			left: calc(50% - 1px)
 			width: 2px
 			height: 70px
+			transition: all 0.6s linear
+			&.active
+				bottom: -70px
+				transition: all 0.5s linear
 		.portfolio_mid_4
 			position: absolute
 			bottom: -170px
@@ -564,12 +568,14 @@ svg
 		background-color: rgba(0,0,0,0.2)
 .tgl_mid_1
 	position: absolute
+	z-index: 7
 	top: -14px
 	left: 0
 	width: 150px
 	height: 100px
 .tgl_mid_2
 	position: absolute
+	z-index: 7
 	top: -100px
 	right: 0
 	width: 150px
@@ -590,7 +596,7 @@ svg
 	.svg-favor
 		position: relative
 	> .svg-favor
-		padding-top: 70px
+		padding-top: 50px
 		padding-bottom: 100px
 	.favor_mid_1
 		position: absolute
@@ -604,20 +610,69 @@ svg
 		left: calc(50% - 1px)
 		width: 2px
 		height: 70px
+	.favor_v_1
+		position: absolute
+		z-index: 6
+		top: -50px
+		left: 160px
+		width: 2px
+		height: 245px
+	.favor_v_2
+		position: absolute
+		z-index: 6
+		top: 115px
+		left: 50%
+		margin-left: -1px
+		width: 2px
+		height: 80px
+	.favor_v_3
+		position: absolute
+		z-index: 6
+		top: -50px
+		right: 161px
+		width: 2px
+		height: 245px
+	.favor_h_1
+		position: absolute
+		top: 18px
+		left: 50%
+		width: 500px
+		height: 2px
 .favor-el-wrap
 	margin-top: 90px
 	.favor-el
+		position: relative
 		.favor-icon
-			margin: 40px 30px
+			margin: 50px 30px 90px 30px
 			font-size: 36px
 		&__in
-			padding: 0 10px
 			h3
 				margin-bottom: 10px
 				font-size: 18px
 				line-height: 24px
+		.favor-hex_1
+			position: absolute
+			left: 50%
+			top: -32px
+			margin-left: -50px
+			width: 100px
+			height: 100px
+		.favor-hex_2
+			position: absolute
+			left: 50%
+			top: -32px
+			margin-left: -50px
+			width: 100px
+			height: 100px
+		.favor-hex_3
+			position: absolute
+			right: 50%
+			top: -32px
+			margin-right: -50px
+			width: 100px
+			height: 100px
 .favor-blog
-	margin-top: 170px
+	margin-top: 180px
 	font-family: $gothic
 	color: #fff
 	font-size: 30px
@@ -635,19 +690,19 @@ svg
 			transition: all 0.3s
 .tgl_mid_3
 	position: absolute
-	top: -72px
+	top: -52px
 	left: 0
 	width: 150px
 	height: 100px
 .tgl_mid_4
 	position: absolute
-	top: -170px
+	top: -150px
 	right: 0
 	width: 150px
 	height: 100px
 .services
 	position: relative
-	padding-top: 70px
+	padding-top: 50px
 	padding-bottom: 100px
 	font-family: $helvetica
 	font-size: 16px
@@ -667,7 +722,7 @@ svg
 		top: 0
 		left: calc(50% - 1px)
 		width: 2px
-		height: 70px
+		height: 50px
 	.services_mid_2
 		position: absolute
 		bottom: 0

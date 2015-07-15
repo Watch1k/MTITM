@@ -47,12 +47,6 @@ $(document).ready(function(){
 		prevArrow: '<div class="slick-prev"><span class="icon-chevron-thin-left icon-dark"></span><span class="icon-chevron-thin-left icon-blue"></span></div>'
 	});
 
-	// function sliderButtons(){
-	// 	$('.pf-slider .slick-prev').prepend("<i class='slider-nav icon-chevron-thin-left'></div>");
-	// 	$('.pf-slider .slick-next').prepend("<i class='slider-nav icon-chevron-thin-right'></div>");
-	// }
-	// sliderButtons();
-
 	$('.pf-slider-for .slick-center').addClass('slick-scale');
 	// change portfolio info blocks & scale slides
 	$('.pf-slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide){
@@ -61,20 +55,28 @@ $(document).ready(function(){
 		$('.pf-info > li').eq(nextSlide).addClass('active');
 	});
 
+	// get slick slider Height
 	var sliderHeight = $('.pf-slider').height();
 	$('.pf-slider').css('height', sliderHeight);
 	$(window).load(function(){
 		$('.pf-slider').hide();
 	});
+
+	// show slide onClick
 	$('.pf-slider-for .slick-slide').on('click', function(){
 		$('.pf-slider').slideDown('slow');
 		$('.slider-close').fadeIn('slow');
+		$('.portfolio_mid_3').addClass('active');
 	});
+
+	// close slide
 	$('.slider-close').on('click', function(){
 		$(this).fadeOut('slow');
 		$('.pf-slider').slideUp('slow');
+		$('.portfolio_mid_3').removeClass('active');
 	});
 
+	// zoomIn middle slide
 	$('.pf-slider-for').on('afterChange', function(event, slick, currentSlide, nextSlide){
 		$('.pf-slider-for .slick-center').addClass('slick-scale');
 	});
