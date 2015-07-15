@@ -106,12 +106,13 @@ svg { display: block; width: 100%; height: 100%; }
 .svg-about__in .about_line_right_2 { position: absolute; top: -30px; right: 0; width: 90px; height: 30px; }
 .svg-about__in .about_line_right_3 { position: absolute; bottom: -30px; right: 0; width: 90px; height: 30px; }
 
-.portfolio { position: relative; padding-top: 70px; padding-bottom: 500px; font-family: "CenturyGothic", Arial, sans-serif; font-size: 16px; color: #181818; line-height: 20px; letter-spacing: 0.02em; }
+.portfolio { position: relative; padding-top: 70px; padding-bottom: 170px; font-family: "CenturyGothic", Arial, sans-serif; font-size: 16px; color: #181818; line-height: 20px; letter-spacing: 0.02em; }
 .portfolio h2 { font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 30px; color: #181818; line-height: 66px; }
 .portfolio .svg-portfolio { position: relative; }
 .portfolio .svg-portfolio .portfolio_mid_1 { position: absolute; top: -70px; left: calc(50% - 1px); width: 2px; height: 70px; }
 .portfolio .svg-portfolio .portfolio_mid_2 { position: absolute; top: 70px; left: calc(50% - 1px); width: 2px; height: 150px; }
 .portfolio .svg-portfolio .portfolio_mid_3 { position: absolute; bottom: -70px; left: calc(50% - 1px); width: 2px; height: 70px; }
+.portfolio .svg-portfolio .portfolio_mid_4 { position: absolute; bottom: -170px; left: calc(50% - 1px); width: 2px; height: 70px; }
 
 .pf-slider-for { position: relative; z-index: 3; margin: 70px auto 0; width: 720px; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 14px; color: #181818; letter-spacing: 0.02em; text-transform: uppercase; }
 .pf-slider-for .slick-track { padding: 30px 0; }
@@ -164,3 +165,11 @@ svg { display: block; width: 100%; height: 100%; }
 .fancybox-wrap, .fancybox-wrap * { box-sizing: content-box; }
 
 .fancybox-wrap .fancybox-title { padding: 0 10px; font-family: "CenturyGothic", Arial, sans-serif; letter-spacing: 0.02em; font-size: 14px; background-color: rgba(0, 0, 0, 0.2); }
+
+.tgl_mid_1 { position: absolute; top: -14px; left: 0; width: 150px; height: 100px; }
+
+.tgl_mid_2 { position: absolute; top: -100px; right: 0; width: 150px; height: 100px; }
+
+.favor { height: 1000px; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; background-color: #181818; border-top: 14px solid #4675b8; }
+.favor .svg-favor { position: relative; }
+.favor .svg-favor .favor_mid_1 { position: absolute; top: 0; left: calc(50% - 1px); width: 2px; height: 70px; }
