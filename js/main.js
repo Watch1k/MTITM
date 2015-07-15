@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
 // Delay animation for active menu
-	var activeMenu = $('.main-nav').find('li.active');
-	activeMenu.removeClass('active');
+	var activeMenu = $('.main-nav__left').find('li:first-child');
 	setTimeout(function(){
 		activeMenu.addClass('active');
 	}, 4000);

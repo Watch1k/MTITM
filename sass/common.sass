@@ -575,7 +575,7 @@ svg
 	width: 150px
 	height: 100px
 .favor
-	height: 1000px
+	position: relative
 	font-family: $helvetica
 	font-size: 16px
 	color: #fff
@@ -583,12 +583,96 @@ svg
 	letter-spacing: 0.02em
 	background-color: $black-dark
 	border-top: 14px solid $blue
+	h2
+		font-family: $helvetica
+		font-size: 30px
+		line-height: 66px
 	.svg-favor
 		position: relative
-		.favor_mid_1
-			position: absolute
-			top: 0
-			left: calc(50% - 1px)
-			width: 2px
-			height: 70px
-
+	> .svg-favor
+		padding-top: 70px
+		padding-bottom: 100px
+	.favor_mid_1
+		position: absolute
+		top: 0
+		left: calc(50% - 1px)
+		width: 2px
+		height: 70px
+	.favor_mid_2
+		position: absolute
+		bottom: 0
+		left: calc(50% - 1px)
+		width: 2px
+		height: 70px
+.favor-el-wrap
+	margin-top: 90px
+	.favor-el
+		.favor-icon
+			margin: 40px 30px
+			font-size: 36px
+		&__in
+			padding: 0 10px
+			h3
+				margin-bottom: 10px
+				font-size: 18px
+				line-height: 24px
+.favor-blog
+	margin-top: 170px
+	font-family: $gothic
+	color: #fff
+	font-size: 30px
+	line-height: 36px
+	letter-spacing: 0.02em
+	a
+		display: inline-block
+		color: inherit
+		padding: 17px
+		background-color: $blue
+		transition: all 0.3s
+		&:hover, &:focus
+			text-decoration: none
+			background-color: darken($blue,20)
+			transition: all 0.3s
+.tgl_mid_3
+	position: absolute
+	top: -72px
+	left: 0
+	width: 150px
+	height: 100px
+.tgl_mid_4
+	position: absolute
+	top: -170px
+	right: 0
+	width: 150px
+	height: 100px
+.services
+	position: relative
+	padding-top: 70px
+	padding-bottom: 100px
+	font-family: $helvetica
+	font-size: 16px
+	color: #fff
+	line-height: 20px
+	letter-spacing: 0.02em
+	background-color: $blue
+	border-top: 2px solid #fff
+	.svg-services
+		position: relative
+	h2
+		font-family: $helvetica
+		font-size: 30px
+		line-height: 66px
+	.services_mid_1
+		position: absolute
+		top: 0
+		left: calc(50% - 1px)
+		width: 2px
+		height: 70px
+	.services_mid_2
+		position: absolute
+		bottom: 0
+		left: calc(50% - 1px)
+		width: 2px
+		height: 100px
+.services-title
+	margin-top: 65px

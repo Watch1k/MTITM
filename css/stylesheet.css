@@ -34,6 +34,15 @@
 .icon-cross:before {
     content: "\e602";
 }
+.icon-cloud-upload:before {
+    content: "\e604";
+}
+.icon-heart:before {
+    content: "\e603";
+}
+.icon-stats-dots:before {
+    content: "\e605";
+}
 
 
 
