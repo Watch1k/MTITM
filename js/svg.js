@@ -10,8 +10,8 @@ $(document).ready(function() {
 		_thisSVG.find('path').each(function(){
 			$(this).attr('class', 'testik');
 			var dashSVG = parseInt($(this).attr('stroke-dashoffset'));
-			var speedSVG = parseInt($(this).attr('svg-speed'));
-			var delaySVG = parseInt($(this).attr('svg-delay'));
+			var speedSVG = parseInt($(this).attr('data-svg-speed'));
+			var delaySVG = parseInt($(this).attr('data-svg-delay'));
 			if (delaySVG == null) {
 				delaySVG = 0;
 			};

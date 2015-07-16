@@ -131,6 +131,13 @@ $(document).ready(function(){
 		}
 	});
 
+// Validation
+	$.validate({
+		validateOnBlur : true
+	});
+	$('input[name="user_phone"]').mask("(999) 999-99-99");
+
+
 // 60fps scrolling
 	var body = document.body,
 	timer;
