@@ -37,7 +37,10 @@ svg
 /* Content width */
 .container
 	width: 970px
+header
+	min-width: 970px
 .header-top-line
+	height: 14px
 	background-color: $black-dark
 /* Logo */
 .logo
@@ -133,6 +136,7 @@ svg
 		height: 17px
 /* Intro */
 .intro
+	min-width: 970px
 	padding-top: 20px
 	height: 425px
 	font-family: $gothic
@@ -194,6 +198,7 @@ svg
 /* Infographic */
 .about
 	position: relative
+	min-width: 970px
 	padding-top: 80px
 	padding-bottom: 80px
 	font-family: $gothic
@@ -327,6 +332,7 @@ svg
 		height: 30px
 .portfolio
 	position: relative
+	min-width: 970px
 	padding-top: 50px
 	padding-bottom: 170px
 	font-family: $gothic
@@ -582,6 +588,7 @@ svg
 	height: 100px
 .favor
 	position: relative
+	min-width: 970px
 	font-family: $helvetica
 	font-size: 16px
 	color: #fff
@@ -616,7 +623,7 @@ svg
 		top: -50px
 		left: 160px
 		width: 2px
-		height: 245px
+		height: 380px
 	.favor_v_2
 		position: absolute
 		z-index: 6
@@ -624,25 +631,27 @@ svg
 		left: 50%
 		margin-left: -1px
 		width: 2px
-		height: 80px
+		height: 215px
 	.favor_v_3
 		position: absolute
 		z-index: 6
 		top: -50px
 		right: 161px
 		width: 2px
-		height: 245px
+		height: 380px
 	.favor_h_1
 		position: absolute
 		top: 18px
 		left: 50%
-		width: 500px
+		width: 650px
 		height: 2px
 .favor-el-wrap
 	margin-top: 90px
 	.favor-el
 		position: relative
 		.favor-icon
+			position: relative
+			z-index: 7
 			margin: 50px 30px 90px 30px
 			font-size: 36px
 		&__in
@@ -652,6 +661,7 @@ svg
 				line-height: 24px
 		.favor-hex_1
 			position: absolute
+			z-index: 6
 			left: 50%
 			top: -32px
 			margin-left: -50px
@@ -659,6 +669,7 @@ svg
 			height: 100px
 		.favor-hex_2
 			position: absolute
+			z-index: 6
 			left: 50%
 			top: -32px
 			margin-left: -50px
@@ -666,13 +677,15 @@ svg
 			height: 100px
 		.favor-hex_3
 			position: absolute
+			z-index: 6
 			right: 50%
 			top: -32px
 			margin-right: -50px
 			width: 100px
 			height: 100px
 .favor-blog
-	margin-top: 180px
+	position: relative
+	padding-top: 180px
 	font-family: $gothic
 	color: #fff
 	font-size: 30px
@@ -688,6 +701,24 @@ svg
 			text-decoration: none
 			background-color: darken($blue,20)
 			transition: all 0.3s
+	.favor_v_4
+		position: absolute
+		top: 20px
+		left: calc(50% - 1px)
+		width: 2px
+		height: 115px
+	.favor-line_left
+		position: absolute
+		top: 0
+		right: 50%
+		width: 150px
+		height: 180px
+	.favor-line_right
+		position: absolute
+		top: 0
+		left: 50%
+		width: 150px
+		height: 180px
 .tgl_mid_3
 	position: absolute
 	top: -52px
@@ -702,6 +733,7 @@ svg
 	height: 100px
 .services
 	position: relative
+	min-width: 970px
 	padding-top: 50px
 	padding-bottom: 100px
 	font-family: $helvetica

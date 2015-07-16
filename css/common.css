@@ -33,7 +33,9 @@ svg { display: block; width: 100%; height: 100%; }
 /* Content width */
 .container { width: 970px; }
 
-.header-top-line { background-color: #181818; }
+header { min-width: 970px; }
+
+.header-top-line { height: 14px; background-color: #181818; }
 
 /* Logo */
 .logo { position: absolute; top: 0; left: calc(50% - 51px); width: 102px; height: 75px; background-color: #181818; }
@@ -61,7 +63,7 @@ svg { display: block; width: 100%; height: 100%; }
 .svg-header .header_right_out { position: absolute; top: 54px; right: 0; width: calc(50% - 484px); height: 17px; }
 
 /* Intro */
-.intro { padding-top: 20px; height: 425px; font-family: "CenturyGothic", Arial, sans-serif; color: #181818; font-size: 18px; line-height: 33px; letter-spacing: 0.02em; }
+.intro { min-width: 970px; padding-top: 20px; height: 425px; font-family: "CenturyGothic", Arial, sans-serif; color: #181818; font-size: 18px; line-height: 33px; letter-spacing: 0.02em; }
 .intro .logo-text { font-family: "Impact", Arial, sans-serif; color: #1d1d1d; font-size: 38px; line-height: 45px; }
 .intro .logo-text a { display: block; color: inherit; }
 .intro .logo-text a:hover, .intro .logo-text a:focus { text-decoration: none; }
@@ -78,7 +80,7 @@ svg { display: block; width: 100%; height: 100%; }
 .svg-intro .intro_right_out { position: absolute; top: 401px; right: 0; width: calc(50% - 484px); height: 2px; }
 
 /* Infographic */
-.about { position: relative; padding-top: 80px; padding-bottom: 80px; font-family: "CenturyGothic", Arial, sans-serif; font-size: 18px; color: #fff; line-height: 22px; letter-spacing: 0.02em; background-color: #181818; border-top: 14px solid #4675b8; border-bottom: 14px solid #4675b8; }
+.about { position: relative; min-width: 970px; padding-top: 80px; padding-bottom: 80px; font-family: "CenturyGothic", Arial, sans-serif; font-size: 18px; color: #fff; line-height: 22px; letter-spacing: 0.02em; background-color: #181818; border-top: 14px solid #4675b8; border-bottom: 14px solid #4675b8; }
 .about__inner { padding: 0 30px; }
 .about p { margin-top: 75px; }
 .about p.year-time { margin-top: 40px; font-family: "Impact", Arial, sans-serif; font-size: 30px; color: #fefefe; line-height: 36px; letter-spacing: 0.05em; }
@@ -106,7 +108,7 @@ svg { display: block; width: 100%; height: 100%; }
 .svg-about__in .about_line_right_2 { position: absolute; top: -30px; right: 0; width: 90px; height: 30px; }
 .svg-about__in .about_line_right_3 { position: absolute; bottom: -30px; right: 0; width: 90px; height: 30px; }
 
-.portfolio { position: relative; padding-top: 50px; padding-bottom: 170px; font-family: "CenturyGothic", Arial, sans-serif; font-size: 16px; color: #181818; line-height: 20px; letter-spacing: 0.02em; }
+.portfolio { position: relative; min-width: 970px; padding-top: 50px; padding-bottom: 170px; font-family: "CenturyGothic", Arial, sans-serif; font-size: 16px; color: #181818; line-height: 20px; letter-spacing: 0.02em; }
 .portfolio h2 { font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 30px; color: #181818; line-height: 66px; }
 .portfolio .svg-portfolio { position: relative; }
 .portfolio .svg-portfolio .portfolio_mid_1 { position: absolute; top: -50px; left: calc(50% - 1px); width: 2px; height: 50px; }
@@ -172,34 +174,37 @@ svg { display: block; width: 100%; height: 100%; }
 
 .tgl_mid_2 { position: absolute; z-index: 7; top: -100px; right: 0; width: 150px; height: 100px; }
 
-.favor { position: relative; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; background-color: #181818; border-top: 14px solid #4675b8; }
+.favor { position: relative; min-width: 970px; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; background-color: #181818; border-top: 14px solid #4675b8; }
 .favor h2 { font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 30px; line-height: 66px; }
 .favor .svg-favor { position: relative; }
 .favor > .svg-favor { padding-top: 50px; padding-bottom: 100px; }
 .favor .favor_mid_1 { position: absolute; top: 0; left: calc(50% - 1px); width: 2px; height: 70px; }
 .favor .favor_mid_2 { position: absolute; bottom: 0; left: calc(50% - 1px); width: 2px; height: 70px; }
-.favor .favor_v_1 { position: absolute; z-index: 6; top: -50px; left: 160px; width: 2px; height: 245px; }
-.favor .favor_v_2 { position: absolute; z-index: 6; top: 115px; left: 50%; margin-left: -1px; width: 2px; height: 80px; }
-.favor .favor_v_3 { position: absolute; z-index: 6; top: -50px; right: 161px; width: 2px; height: 245px; }
-.favor .favor_h_1 { position: absolute; top: 18px; left: 50%; width: 500px; height: 2px; }
+.favor .favor_v_1 { position: absolute; z-index: 6; top: -50px; left: 160px; width: 2px; height: 380px; }
+.favor .favor_v_2 { position: absolute; z-index: 6; top: 115px; left: 50%; margin-left: -1px; width: 2px; height: 215px; }
+.favor .favor_v_3 { position: absolute; z-index: 6; top: -50px; right: 161px; width: 2px; height: 380px; }
+.favor .favor_h_1 { position: absolute; top: 18px; left: 50%; width: 650px; height: 2px; }
 
 .favor-el-wrap { margin-top: 90px; }
 .favor-el-wrap .favor-el { position: relative; }
-.favor-el-wrap .favor-el .favor-icon { margin: 50px 30px 90px 30px; font-size: 36px; }
+.favor-el-wrap .favor-el .favor-icon { position: relative; z-index: 7; margin: 50px 30px 90px 30px; font-size: 36px; }
 .favor-el-wrap .favor-el__in h3 { margin-bottom: 10px; font-size: 18px; line-height: 24px; }
-.favor-el-wrap .favor-el .favor-hex_1 { position: absolute; left: 50%; top: -32px; margin-left: -50px; width: 100px; height: 100px; }
-.favor-el-wrap .favor-el .favor-hex_2 { position: absolute; left: 50%; top: -32px; margin-left: -50px; width: 100px; height: 100px; }
-.favor-el-wrap .favor-el .favor-hex_3 { position: absolute; right: 50%; top: -32px; margin-right: -50px; width: 100px; height: 100px; }
+.favor-el-wrap .favor-el .favor-hex_1 { position: absolute; z-index: 6; left: 50%; top: -32px; margin-left: -50px; width: 100px; height: 100px; }
+.favor-el-wrap .favor-el .favor-hex_2 { position: absolute; z-index: 6; left: 50%; top: -32px; margin-left: -50px; width: 100px; height: 100px; }
+.favor-el-wrap .favor-el .favor-hex_3 { position: absolute; z-index: 6; right: 50%; top: -32px; margin-right: -50px; width: 100px; height: 100px; }
 
-.favor-blog { margin-top: 180px; font-family: "CenturyGothic", Arial, sans-serif; color: #fff; font-size: 30px; line-height: 36px; letter-spacing: 0.02em; }
+.favor-blog { position: relative; padding-top: 180px; font-family: "CenturyGothic", Arial, sans-serif; color: #fff; font-size: 30px; line-height: 36px; letter-spacing: 0.02em; }
 .favor-blog a { display: inline-block; color: inherit; padding: 17px; background-color: #4675b8; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .favor-blog a:hover, .favor-blog a:focus { text-decoration: none; background-color: #2a466e; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.favor-blog .favor_v_4 { position: absolute; top: 20px; left: calc(50% - 1px); width: 2px; height: 115px; }
+.favor-blog .favor-line_left { position: absolute; top: 0; right: 50%; width: 150px; height: 180px; }
+.favor-blog .favor-line_right { position: absolute; top: 0; left: 50%; width: 150px; height: 180px; }
 
 .tgl_mid_3 { position: absolute; top: -52px; left: 0; width: 150px; height: 100px; }
 
 .tgl_mid_4 { position: absolute; top: -150px; right: 0; width: 150px; height: 100px; }
 
-.services { position: relative; padding-top: 50px; padding-bottom: 100px; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; background-color: #4675b8; border-top: 2px solid #fff; }
+.services { position: relative; min-width: 970px; padding-top: 50px; padding-bottom: 100px; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; background-color: #4675b8; border-top: 2px solid #fff; }
 .services .svg-services { position: relative; }
 .services h2 { font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 30px; line-height: 66px; }
 .services .services_mid_1 { position: absolute; top: 0; left: calc(50% - 1px); width: 2px; height: 50px; }
