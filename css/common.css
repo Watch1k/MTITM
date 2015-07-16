@@ -204,10 +204,36 @@ header { min-width: 970px; }
 
 .tgl_mid_4 { position: absolute; top: -150px; right: 0; width: 150px; height: 100px; }
 
-.services { position: relative; min-width: 970px; padding-top: 50px; padding-bottom: 100px; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; background-color: #4675b8; border-top: 2px solid #fff; }
+.services { position: relative; min-width: 970px; padding-top: 50px; padding-bottom: 90px; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; background-color: #4675b8; border-top: 2px solid #fff; }
 .services .svg-services { position: relative; }
 .services h2 { font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 30px; line-height: 66px; }
-.services .services_mid_1 { position: absolute; top: 0; left: calc(50% - 1px); width: 2px; height: 50px; }
-.services .services_mid_2 { position: absolute; bottom: 0; left: calc(50% - 1px); width: 2px; height: 100px; }
+.services__inner { position: relative; padding-top: 10px; padding-bottom: 10px; min-height: 80px; background-color: #181818; }
+.services__inner .tgl_top_1 { position: absolute; top: -1px; right: -1px; height: calc(50% + 2px); width: 40px; }
+.services__inner .tgl_bot_1 { position: absolute; bottom: -1px; right: -1px; height: calc(50% + 2px); width: 40px; }
+.services__left, .services__right { display: table-cell; float: none; }
+.services__right { height: 100%; vertical-align: middle; }
+.services__right .btn-now { display: block; font-family: "CenturyGothic", Arial, sans-serif; font-size: 18px; line-height: 22px; }
+.services__right .btn-now:hover, .services__right .btn-now:focus { text-decoration: none; color: #a2badc; }
 
-.services-title { margin-top: 65px; }
+.services_mid_1 { position: absolute; top: 0; left: calc(50% - 1px); width: 2px; height: 50px; }
+
+.services_mid_2 { position: absolute; bottom: 0; left: calc(50% - 1px); width: 2px; height: 90px; }
+
+.services_left_1 { position: absolute; top: -50px; left: 160px; width: 2px; height: 160px; }
+
+.services-title { min-height: 40px; margin-top: 65px; margin-bottom: 15px; font-family: "CenturyGothic", Arial, sans-serif; font-size: 20px; line-height: 1em; }
+.services-title p { margin-left: 65px; }
+
+.services-hex_1 { position: absolute; top: -99px; left: -50px; width: 100px; height: 100px; }
+
+.services_h_1 { position: absolute; top: -65px; left: 49px; right: 100px; height: 2px; }
+
+.services_h_2 { position: absolute; top: 50%; margin-top: -1px; left: 100%; height: 2px; width: 70px; }
+
+.services_v_1 { position: absolute; top: -65px; right: 100px; height: 65px; width: 2px; }
+
+.services_v_2 { position: absolute; top: 0; left: -1px; bottom: -22px; width: 2px; }
+
+.services_v_3 { position: absolute; top: 0; left: -1px; height: 100%; width: 2px; }
+
+.contacts { height: 700px; }

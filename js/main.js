@@ -132,5 +132,6 @@ $(document).ready(function(){
 			body.classList.remove('disable-hover')
 		}, 250);
 	}, false);
+	
 
 });
