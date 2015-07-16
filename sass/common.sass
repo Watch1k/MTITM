@@ -847,3 +847,44 @@ header
 	width: 2px
 .contacts
 	height: 700px
+	font-family: $helvetica
+	font-size: 18px
+	color: $black
+	line-height: 24px
+	letter-spacing: 0.02em
+	h2
+		font-size: 30px
+		line-height: 45px
+		+ p
+			margin-top: 5px
+			font-family: $gothic
+.contact-form
+	input
+		width: 100%
+		height: 30px
+		border: 2px solid $blue
+		text-align: center
+		+ input
+			margin-top: 10px
+		&[type=submit]
+			border: 2px solid transparent
+			background-color: $black
+			color: #fff
+			&:hover
+				background-color: $blue
+	textarea
+		margin-top: 10px
+		padding: 5px 10px
+		width: 100%
+		height: 100px
+		border: 2px solid $blue
+		resize: none
+		line-height: 20px
+footer
+	height: 32px
+	background-color: $blue
+	font-family: $helvetica
+	font-size: 12px
+	color: #fff
+	line-height: 16px
+	letter-spacing: 0.02em
