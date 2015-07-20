@@ -55,6 +55,47 @@ $(document).ready(function() {
 		}
 	});
 
+	$('.svg-inview_2').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+		if (isInView) {
+			if (visiblePartY == 'top') {
+				// top part of element is visible
+				_thisSVG = $(this);
+				if (!$(this).hasClass('is-visible')) {
+					AnimateSVG();
+					$(_thisSVG).addClass('is-visible');
+					_thisSVG = $('.contacts_left_out_4');
+					AnimateSVG();
+					_thisSVG = $('.contacts_right_out_4');
+					AnimateSVG();
+				};
+			} else if (visiblePartY == 'bottom') {
+				// bottom part of element is visible
+				_thisSVG = $(this);
+				if (!$(this).hasClass('is-visible')) {
+					AnimateSVG();
+					$(_thisSVG).addClass('is-visible');
+					_thisSVG = $('.contacts_left_out_4');
+					AnimateSVG();
+					_thisSVG = $('.contacts_right_out_4');
+					AnimateSVG();
+				};
+			} else {
+				// whole part of element is visible
+				_thisSVG = $(this);
+				if (!$(this).hasClass('is-visible')) {
+					AnimateSVG();
+					$(_thisSVG).addClass('is-visible');
+					_thisSVG = $('.contacts_left_out_4');
+					AnimateSVG();
+					_thisSVG = $('.contacts_right_out_4');
+					AnimateSVG();
+				};
+			}
+		} else {
+			// element has gone out of viewport
+		}
+	});
+
 // Snap SVG
 
 	var dashArray = Array;

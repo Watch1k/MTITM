@@ -242,8 +242,10 @@ header { min-width: 970px; }
 
 .contacts-info { position: relative; margin-top: 150px; padding-bottom: 20px; border-bottom: 2px solid #4675b8; }
 
+.contacts-icon { display: block; margin: -50px auto 0; width: 50px; height: 50px; font-size: 30px; color: #4675b8; background-color: #FFF; text-align: center; }
+
 .svg-contacts { position: relative; }
-.svg-contacts .contacts_line_left { position: absolute; top: 0; left: 0; width: 485px; height: 300px; }
+.svg-contacts .contacts_line_left { position: absolute; top: 0; left: 0; width: 485px; height: 200px; }
 .svg-contacts .contacts_line_right { position: absolute; top: 0; left: 485px; width: 485px; height: 200px; }
 .svg-contacts .contacts_line_mid { position: absolute; top: 0; left: 482px; width: 6px; height: 200px; }
 .svg-contacts .contacts_line_mid_2 { position: absolute; bottom: -100px; left: 50%; margin-left: -17px; width: 34px; height: 100px; }
@@ -253,23 +255,19 @@ header { min-width: 970px; }
 .svg-contacts .contacts_line_left_4 { position: absolute; top: 320px; left: 0; width: 485px; height: 125px; }
 .svg-contacts .contacts_line_mid_4 { position: absolute; top: 320px; left: 482px; width: 6px; height: 55px; }
 .svg-contacts .contacts_line_right_4 { position: absolute; top: 320px; left: 485px; width: 485px; height: 125px; }
-.svg-contacts .header_left_out_4 { position: absolute; top: 426px; left: 0; width: calc(50% - 484px); height: 17px; }
-.svg-contacts .header_right_out_4 { position: absolute; top: 426px; right: 0; width: calc(50% - 484px); height: 17px; }
+.svg-contacts .contacts_left_out_4 { position: absolute; top: 426px; left: 0; width: calc(50% - 484px); height: 17px; }
+.svg-contacts .contacts_right_out_4 { position: absolute; top: 426px; right: 0; width: calc(50% - 484px); height: 17px; }
 
-.contact-form { overflow: hidden; margin-top: 120px; }
+.contact-form { overflow: hidden; margin-top: 120px; min-height: 370px; }
 .contact-form .field { margin-bottom: 10px; }
 .contact-form .field input { width: 100%; height: 30px; border: 2px solid #4675b8; text-align: center; }
-.contact-form .field textarea { padding: 5px 10px; width: 100%; height: 100px; border: 2px solid #4675b8; resize: none; line-height: 20px; }
+.contact-form .field textarea { width: 100%; height: 200px; border: 2px solid #4675b8; resize: none; line-height: 20px; }
 .contact-form button[type=submit] { width: 100%; height: 30px; background-color: #1d1d1d; color: #fff; }
 .contact-form button[type=submit]:hover { background-color: #4675b8; }
 .contact-form .form-error { font-size: 16px; line-height: 20px; }
 
-footer { height: 32px; background-color: #4675b8; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 12px; color: #fff; line-height: 32px; letter-spacing: 0.02em; }
-
-.testik { min-width: 1000px; }
-
-.svg-testik { position: relative; }
-
-.testik_left_out { position: absolute; top: 3px; left: 0; width: calc(50% - 484px); height: 2px; }
-
-.testik_line_left { position: absolute; top: 0; left: 0; width: 485px; height: 300px; }
+footer { margin-top: 16px; height: 32px; background-color: #4675b8; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 12px; color: #fff; line-height: 16px; letter-spacing: 0.02em; }
+footer .svg-footer { position: relative; }
+footer .svg-footer .ft_line_left { position: absolute; top: -4px; left: 0; margin-left: -484px; width: 50%; height: 4px; }
+footer .svg-footer .ft_line_right { position: absolute; top: -4px; right: 0; width: calc(50% - 484px); height: 4px; }
+footer .svg-footer .ft_line_mid { position: absolute; top: -16px; left: 0; width: 100%; height: 16px; }

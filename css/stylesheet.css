@@ -43,6 +43,15 @@
 .icon-stats-dots:before {
     content: "\e605";
 }
+.icon-envelop:before {
+    content: "\e606";
+}
+.icon-location:before {
+    content: "\e607";
+}
+.icon-phone:before {
+    content: "\e608";
+}
 
 
 
