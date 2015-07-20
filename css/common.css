@@ -243,7 +243,7 @@ header { min-width: 970px; }
 .contacts-info { position: relative; margin-top: 150px; padding-bottom: 20px; border-bottom: 2px solid #4675b8; }
 
 .svg-contacts { position: relative; }
-.svg-contacts .contacts_line_left { position: absolute; top: 0; left: 0; width: 485px; height: 200px; }
+.svg-contacts .contacts_line_left { position: absolute; top: 0; left: 0; width: 485px; height: 300px; }
 .svg-contacts .contacts_line_right { position: absolute; top: 0; left: 485px; width: 485px; height: 200px; }
 .svg-contacts .contacts_line_mid { position: absolute; top: 0; left: 482px; width: 6px; height: 200px; }
 .svg-contacts .contacts_line_mid_2 { position: absolute; bottom: -100px; left: 50%; margin-left: -17px; width: 34px; height: 100px; }
@@ -265,3 +265,11 @@ header { min-width: 970px; }
 .contact-form .form-error { font-size: 16px; line-height: 20px; }
 
 footer { height: 32px; background-color: #4675b8; font-family: "HelveticaNeueCyr-Roman", Arial, sans-serif; font-size: 12px; color: #fff; line-height: 32px; letter-spacing: 0.02em; }
+
+.testik { min-width: 1000px; }
+
+.svg-testik { position: relative; }
+
+.testik_left_out { position: absolute; top: 3px; left: 0; width: calc(50% - 484px); height: 2px; }
+
+.testik_line_left { position: absolute; top: 0; left: 0; width: 485px; height: 300px; }
