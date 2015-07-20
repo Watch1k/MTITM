@@ -6,6 +6,7 @@ $(document).ready(function() {
 	// console.log(length);
 
 	// get SVG attributes for animation
+	var _thisSVG;
 	function AnimateSVG() {
 		_thisSVG.find('path').each(function(){
 			$(this).attr('class', 'testik');
