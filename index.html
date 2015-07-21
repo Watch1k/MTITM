@@ -74,22 +74,24 @@
 						<!-- end logo-wrapper -->
 
 						<!-- begin navigation -->
-						<ul class="main-nav clearfix">
-							<li class="main-nav__left">
-								<ul class="nav-justified animated fadeInRight">
-									<li><a href="#">О нас</a></li>
-									<li><a href="#">Портфолио</a></li>
-									<li><a href="#">Услуги</a></li>
-								</ul>
-							</li>
-							<li class="main-nav__right">
-								<ul class="nav-justified animated fadeInLeft">
-									<li><a href="#">Сервисы</a></li>
-									<li><a href="#">Блог</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul>
-							</li>	
-						</ul>
+						<div class="main-nav-wrap">
+							<ul class="main-nav clearfix">
+								<li class="main-nav__left">
+									<ul class="nav-justified animated fadeInRight">
+										<li><a href="#about" class="scrollto">О нас</a></li>
+										<li><a href="#portfolio" class="scrollto">Портфолио</a></li>
+										<li><a href="#favor" class="scrollto">Услуги</a></li>
+									</ul>
+								</li>
+								<li class="main-nav__right">
+									<ul class="nav-justified animated fadeInLeft">
+										<li><a href="#services" class="scrollto">Сервисы</a></li>
+										<li><a href="#">Блог</a></li>
+										<li><a href="#contacts" class="scrollto">Контакты</a></li>
+									</ul>
+								</li>	
+							</ul>
+						</div>
 						<!-- end navigation -->
 					</div>
 				</div>
@@ -99,7 +101,7 @@
 
 	<main>
 		<!-- begin intro -->
-		<div class="intro container-fluid">
+		<div id="intro" class="intro container-fluid">
 			<div class="row svg-intro">
 				<!-- SVG intro_left_out -->
 				<div class="intro_left_out">
@@ -163,7 +165,7 @@
 		<!-- end intro -->
 
 		<!-- begin about  -->
-		<div class="about container-fluid wow fadeInUp" data-wow-offset="50">
+		<div id="about" class="about container-fluid wow fadeInUp" data-wow-offset="50">
 			<div class="row svg-about">
 				<!-- SVG about_mid_1 -->
 				<div class="about_mid_1 svg-inview">
@@ -448,7 +450,7 @@
 		<!-- end about -->
 
 		<!-- begin portfolio  -->
-		<div class="portfolio container-fluid">
+		<div id="portfolio" class="portfolio container-fluid">
 			<div class="row svg-portfolio">
 				<div class="portfolio_mid_4 svg-inview">
 					<svg viewBox="0 0 2 100" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -1170,7 +1172,7 @@
 		<!-- end portfolio -->
 		
 		<!-- begin favor -->
-		<div class="favor container-fluid wow fadeInUp" data-wow-offset="50">
+		<div id="favor" class="favor container-fluid wow fadeInUp" data-wow-offset="50">
 			<!-- vertical line top -->
 			<div class="favor_mid_1 svg-inview">
 				<svg viewBox="0 0 2 170" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -1325,7 +1327,7 @@
 		<!-- end favor -->
 
 		<!-- begin services -->
-		<div class="services container-fluid wow fadeInDown" data-wow-offset="50">
+		<div id="services" class="services container-fluid wow fadeInDown" data-wow-offset="50">
 			<!-- vertical line top -->
 			<div class="services_mid_1 svg-inview">
 				<svg viewBox="0 0 2 100" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -1503,7 +1505,7 @@
 		<!-- end services -->
 
 		<!-- begin contacts -->
-		<div class="contacts container-fluid">
+		<div id="contacts" class="contacts container-fluid">
 			<div class="row svg-contacts">
 				<!-- SVG contacts_left_out -->
 				<div class="contacts_left_out svg-inview">
@@ -1661,6 +1663,15 @@
 								</div>
 								<button type="submit" class="wow fadeInLeftBig" data-wow-duration="2s" data-wow-offset="50">Submit</button>
 							</form>
+							<div class="form-loading">
+								<p class="text-center">Письмо отправляется!</p>
+							</div>
+							<div class="form-success">
+								<p class="text-center">Ваше письмо успешно отправлено!</p>
+							</div>
+							<div class="form-new">
+								<button class="btn-new">Написать новое сообщение</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1712,6 +1723,8 @@
 	<script src="js/jquery.inview.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/svg.js"></script>
+	<script src="js/jquery.nav.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

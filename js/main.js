@@ -11,6 +11,17 @@ $(document).ready(function(){
 		});
 	}());
 
+// ScrollTo
+	$(function(){
+	    $('.main-nav').onePageNav({
+			filter: ':not(.external)',
+			scrollThreshold: 0.25,
+			scrollSpeed: 1200,
+			easing: 'swing',
+			scrollOffset: 38
+		});
+	});
+
 // Delay animation for active menu
 	var activeMenu = $('.main-nav__left').find('li:first-child');
 	setTimeout(function(){
@@ -151,5 +162,59 @@ $(document).ready(function(){
 		}, 250);
 	}, false);
 	
+
+// Ajax Form
+	(function () {
+		var inner = $('.contact-form'),
+			result = $('.form-success'),
+			load = $('.form-loading'),
+			newForm = $('.form-new');
+		$.validate({
+			onSuccess : function() {
+				load.fadeIn();
+				post_data = $('#form').serialize();
+				
+				//Ajax post data to server
+				$.post('send.php', post_data, function(response){  
+				    if (response.type == 'error'){ //load json data from server and output message     
+				        output = '<div class="error">'+response.text+'</div>';
+				    }
+				    else {
+				        output = '<div class="success">'+response.text+'</div>';
+				        //reset values in all input fields
+				        inner.fadeOut();
+				        load.fadeOut();
+				        result.fadeIn();
+				        newForm.fadeIn();
+				    }
+				}, 'json');
+				return false;
+			}
+		});
+	}());
+
+// New Message
+	$('.btn-new').on('click', function(){
+		$('.form-new').fadeOut();
+		$('.form-success').fadeOut();
+		$('.contact-form').find("input[type=text], textarea").val("");
+		$('.contact-form').fadeIn();
+	});
+
+
+});
+
+// Window Scroll
+jQuery(window).scroll(function () {
+
+    'use strict';
+
+    if (jQuery(document).scrollTop() >= 67) {
+        $('.main-nav-wrap').addClass('fixed');
+        $('.logo').addClass('fixed');
+    } else {
+        $('.main-nav-wrap').removeClass('fixed');
+        $('.logo').removeClass('fixed');
+    }
 
 });
