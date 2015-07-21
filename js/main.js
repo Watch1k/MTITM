@@ -22,12 +22,6 @@ $(document).ready(function(){
 		});
 	});
 
-// Delay animation for active menu
-	var activeMenu = $('.main-nav__left').find('li:first-child');
-	setTimeout(function(){
-		activeMenu.addClass('active');
-	}, 4000);
-
 // js-inview
 	$('.js-inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
 		if (isInView) {
