@@ -78,7 +78,7 @@ header
 		top: 0
 		left: 50%
 		margin-left: -15px
-		width: 30px
+		width: 27px
 		background-color: transparent
 		&:before
 			content: none
@@ -396,10 +396,10 @@ header
 			bottom: 0
 			left: calc(50% - 1px)
 			width: 2px
-			height: 70px
+			height: 40px
 			transition: all 0.6s linear
 			&.active
-				bottom: -70px
+				bottom: -45px
 				transition: all 0.5s linear
 		.portfolio_mid_4
 			position: absolute
@@ -425,6 +425,8 @@ header
 	color: $black-dark
 	letter-spacing: 0.02em
 	text-transform: uppercase
+	.slick-list
+		margin-left: -1px
 	.slick-track
 		padding: 30px 0
 	.slick-prev, .slick-next
@@ -465,7 +467,7 @@ header
 	.slick-slide
 		position: relative
 		text-align: center
-		height: 100px
+		height: 112px
 		cursor: pointer
 		transition: all 0.7s
 		stroke-width: 2
@@ -483,42 +485,39 @@ header
 			polygon
 				fill: $blue
 				transition: all 0.3s
+			.pf-category
+				p:nth-child(1)
+					display: none
+				p:nth-child(2)
+					display: block
 		.pf-category
 			position: relative
 			padding-left: 34px
 			padding-right: 34px
 			z-index: 6
-			top: -100px
+			top: -112px
 			left: 0
 			height: 100%
 			width: 100%
 			&__in
 				display: table-cell
-				height: 100px
+				height: 112px
 				width: 90px
 				vertical-align: middle
+				p:nth-child(2)
+					display: none
+					font-size: 14px
+					text-transform: none
 				span
 					font-size: 10px
 	.pf-svg
 		svg
 			width: 100px
-			height: 100px
+			height: 112px
 			margin: 0 auto
 .pf-slider
 	margin: 50px auto 0
 	width: 866px
-	polygon
-		stroke-dasharray: 820,130
-	.poly__full
-		polygon
-			stroke-dasharray: 950
-			stroke-dashoffset: 0
-	.poly__right__bot
-		polygon
-			stroke-dashoffset: 627
-	.poly__left__top
-		polygon
-			stroke-dashoffset: 153
 .pf-slide__in
 	position: relative
 	overflow: hidden
@@ -575,7 +574,7 @@ header
 	position: relative
 	z-index: 2
 	overflow: hidden
-	margin: -80px auto 0
+	margin: -86px auto 0
 	width: 600px
 	padding: 100px 20px 20px 20px
 	font-family: $default-fonts
@@ -673,7 +672,7 @@ header
 		height: 380px
 	.favor_h_1
 		position: absolute
-		top: 18px
+		top: 17px
 		left: 50%
 		width: 650px
 		height: 2px
@@ -695,26 +694,26 @@ header
 			position: absolute
 			z-index: 6
 			left: 50%
-			top: -32px
+			top: -38px
 			margin-left: -50px
 			width: 100px
-			height: 100px
+			height: 112px
 		.favor-hex_2
 			position: absolute
 			z-index: 6
 			left: 50%
-			top: -32px
+			top: -38px
 			margin-left: -50px
 			width: 100px
-			height: 100px
+			height: 112px
 		.favor-hex_3
 			position: absolute
 			z-index: 6
 			right: 50%
-			top: -32px
+			top: -38px
 			margin-right: -50px
 			width: 100px
-			height: 100px
+			height: 112px
 .favor-blog
 	position: relative
 	padding-top: 180px
@@ -810,9 +809,11 @@ header
 			font-family: $gothic
 			font-size: 18px
 			line-height: 22px
+			transition: color 0.3s
 			&:hover, &:focus
 				text-decoration: none
-				color: lighten($blue,25)
+				color: #fff
+				transition: color 0.3s
 .services_mid_1
 	position: absolute
 	top: 0
@@ -833,7 +834,7 @@ header
 	height: 160px
 .services-title
 	min-height: 40px
-	margin-top: 65px
+	margin-top: 76px
 	margin-bottom: 15px
 	font-family: $gothic
 	font-size: 20px
@@ -842,13 +843,13 @@ header
 		margin-left: 65px
 .services-hex_1
 	position: absolute
-	top: -99px
+	top: -110px
 	left: -50px
 	width: 100px
-	height: 100px
+	height: 112px
 .services_h_1
 	position: absolute
-	top: -65px
+	top: -66px
 	left: 49px
 	right: 100px
 	height: 2px

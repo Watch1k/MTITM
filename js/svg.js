@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 // // Get width of SVG path
-	// var path = document.querySelector('#contacts_blue_3');
+	// var path = document.querySelector('#testik');
 	// var length = path.getTotalLength();
 	// console.log(length);
 
