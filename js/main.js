@@ -74,6 +74,7 @@ $(document).ready(function(){
 			$(this).fadeToggle();
 			$(this).fadeToggle();
 		});
+		$('.btn-hide').fadeOut();
 		eqRow = 2;
 	});
 
@@ -149,20 +150,20 @@ $(document).ready(function(){
 	var eqRow = 2;
 	$('.btn-more').on('click', function(){
 		$(this).siblings('.btn-hide').fadeIn();
-		$(this).siblings('.row').eq(eqRow).fadeIn();
-		$(this).siblings('.row').eq(eqRow + 1).fadeIn();
+		$(this).siblings('.row').eq(eqRow).slideDown();
+		$(this).siblings('.row').eq(eqRow + 1).slideDown();
 		$(window).scrollTo('+=500px', 1000);
-		if ($(this).siblings('.row').eq(eqRow).length > 0) {
-			eqRow += 2;
+		eqRow += 2;
+		if ($(this).siblings('.row').eq(eqRow + 1).length > 0) {
 		} else {
 			$(this).fadeOut();
 		};
-		
+		console.log(eqRow);		
 	});
 	$('.btn-hide').on('click', function(){
 		eqRow -= 2;
-		$(this).siblings('.row').eq(eqRow).fadeOut();
-		$(this).siblings('.row').eq(eqRow + 1).fadeOut();
+		$(this).siblings('.row').eq(eqRow).slideUp();
+		$(this).siblings('.row').eq(eqRow + 1).slideUp();
 		$(this).siblings('.row').find('svg').each(function(){
 			$(this).fadeToggle();
 			$(this).fadeToggle();
@@ -172,6 +173,7 @@ $(document).ready(function(){
 		if (eqRow < 3) {
 			$(this).fadeOut();
 		};
+		console.log(eqRow);
 	});
 
 // Validation
