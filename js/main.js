@@ -98,7 +98,7 @@ $(document).ready(function(){
 		$('.pf-slider').get(0).slick.setPosition(); // fix for display none
 		$('.slider-close').fadeIn('slow');
 		$('.portfolio_mid_3').addClass('active');
-		$(window).scrollTo('#pf-slider', 1000, {offset: -35});
+		$(window).scrollTo('#pf-slider', 1000, {offset: -150});
 	});
 
 	// close slide
