@@ -168,6 +168,7 @@ header { min-width: 970px; }
 .pf-slide > .row { position: relative; }
 .pf-slide > .row + .row .pf-slide__in { margin-top: -50px; }
 .pf-slide > .row + .row + .row { display: none; }
+.pf-slide > .row + .row + .row .pf-slide__in { margin-top: 0; -webkit-transition: all 0.5s; transition: all 0.5s; }
 .pf-slide .btn-hide { position: absolute; display: none; bottom: 0; right: 0; font-size: 30px; width: 40px; height: 30px; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); background-color: transparent; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
 .pf-slide .btn-hide:hover { -webkit-transform: rotate(-90deg) scale(1.4, 1.4); -ms-transform: rotate(-90deg) scale(1.4, 1.4); transform: rotate(-90deg) scale(1.4, 1.4); -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
 .pf-slide .btn-hide .icon-dark { position: relative; top: -30px; left: 7px; color: #1d1d1d; }
