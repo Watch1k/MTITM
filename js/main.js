@@ -69,11 +69,20 @@ $(document).ready(function(){
 		$('.pf-slider-for .slick-center').removeClass('slick-scale');
 		$('.pf-info > li').removeClass('active');
 		$('.pf-info > li').eq(nextSlide).addClass('active');
+		$('.pf-slide.slick-slide').eq(currentSlide).children('.row + .row + .row').fadeOut();
+		$('.pf-slide.slick-slide').eq(currentSlide).find('svg').each(function(){
+			$(this).fadeToggle();
+			$(this).fadeToggle();
+		});
+		eqRow = 2;
+	});
+
+	// zoomIn middle slide
+	$('.pf-slider-for').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		$('.pf-slider-for .slick-center').addClass('slick-scale');
 	});
 
 	// get slick slider Height
-	var sliderHeight = $('.pf-slider').height();
-	$('.pf-slider').css('height', sliderHeight);
 	$(window).load(function(){
 		$('.pf-slider').hide();
 	});
@@ -89,13 +98,10 @@ $(document).ready(function(){
 	// close slide
 	$('.slider-close').on('click', function(){
 		$(this).fadeOut('slow');
+		$('.pf-slide.slick-slide > .row + .row + .row').fadeOut();
 		$('.pf-slider').slideUp('slow');
 		$('.portfolio_mid_3').removeClass('active');
-	});
-
-	// zoomIn middle slide
-	$('.pf-slider-for').on('afterChange', function(event, slick, currentSlide, nextSlide){
-		$('.pf-slider-for .slick-center').addClass('slick-scale');
+		eqRow = 2;
 	});
 
 	//Equal heights portfolio info blocks.
@@ -124,6 +130,9 @@ $(document).ready(function(){
 		caption : {
 			type : 'outside'
 		},
+		helpers: {
+			thumbs: true
+		},
 		locked: false,
 		locale: 'ru',
 		locales: {
@@ -134,6 +143,35 @@ $(document).ready(function(){
 				EXPAND: 'показать в полном размере'
 			}
 		}
+	});
+
+// Slider show more / hide buttons
+	var eqRow = 2;
+	$('.btn-more').on('click', function(){
+		$(this).siblings('.btn-hide').fadeIn();
+		$(this).siblings('.row').eq(eqRow).fadeIn();
+		$(this).siblings('.row').eq(eqRow + 1).fadeIn();
+		$(window).scrollTo('+=500px', 1000);
+		if ($(this).siblings('.row').eq(eqRow).length > 0) {
+			eqRow += 2;
+		} else {
+			$(this).fadeOut();
+		};
+		
+	});
+	$('.btn-hide').on('click', function(){
+		eqRow -= 2;
+		$(this).siblings('.row').eq(eqRow).fadeOut();
+		$(this).siblings('.row').eq(eqRow + 1).fadeOut();
+		$(this).siblings('.row').find('svg').each(function(){
+			$(this).fadeToggle();
+			$(this).fadeToggle();
+		});
+		$(window).scrollTo('-=500px', 1000);
+		$('.btn-more').fadeIn();
+		if (eqRow < 3) {
+			$(this).fadeOut();
+		};
 	});
 
 // Validation

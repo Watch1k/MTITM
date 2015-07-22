@@ -157,15 +157,23 @@ header { min-width: 970px; }
 
 .pf-slide__in { position: relative; overflow: hidden; height: 312px; vertical-align: bottom; }
 .pf-slide__in svg + svg { position: absolute; top: 0; fill: rgba(70, 117, 184, 0); -webkit-transition: all 0.5s; transition: all 0.5s; }
-.pf-slide__in svg + svg text { fill: rgba(255, 255, 255, 0); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); -webkit-transition: fill 0.5s; transition: fill 0.5s; }
+.pf-slide__in svg + svg text { fill: rgba(255, 255, 255, 0); -webkit-transition: fill 0.5s; transition: fill 0.5s; }
 .pf-slide__in:hover svg + svg { fill: rgba(70, 117, 184, 0.5); -webkit-transition: all 0.5s; transition: all 0.5s; }
-.pf-slide__in:hover svg + svg text { fill: white; -webkit-transition: fill 0.5s; transition: fill 0.5s; }
+.pf-slide__in:hover svg + svg text { text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); fill: white; -webkit-transition: fill 0.5s; transition: fill 0.5s; }
 .pf-slide__in .pf-text { display: table-cell; padding-left: 20px; padding-right: 20px; position: relative; z-index: 3; top: -312px; height: 312px; left: 0; font-family: "CenturyGothic", Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; letter-spacing: 0.02em; text-align: center; vertical-align: middle; }
 .pf-slide__in .pf-text__strong { font-family: "HelveticaNeueCyr-Medium", Arial, sans-serif; font-size: 20px; line-height: 36px; }
 .pf-slide__in polygon { stoke-width: 2; stroke: #4675b8; }
 
+.pf-slide { padding-bottom: 40px; }
 .pf-slide > .row { position: relative; }
-.pf-slide > .row + .row { position: relative; top: -50px; }
+.pf-slide > .row + .row .pf-slide__in { margin-top: -50px; }
+.pf-slide > .row + .row + .row { display: none; }
+.pf-slide .btn-hide { position: absolute; display: none; bottom: 0; right: 0; font-size: 30px; width: 40px; height: 30px; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); background-color: transparent; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
+.pf-slide .btn-hide:hover { -webkit-transform: rotate(-90deg) scale(1.4, 1.4); -ms-transform: rotate(-90deg) scale(1.4, 1.4); transform: rotate(-90deg) scale(1.4, 1.4); -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
+.pf-slide .btn-hide .icon-dark { position: relative; top: -30px; left: 7px; color: #1d1d1d; }
+.pf-slide .btn-hide .icon-blue { color: #4675b8; }
+.pf-slide .btn-more { position: absolute; bottom: 0; left: 50%; margin-left: -120px; width: 240px; height: 32px; background-color: #4675b8; color: #fff; line-height: 32px; }
+.pf-slide .btn-more:hover { background-color: #2a466e; }
 
 .pf-info { position: relative; z-index: 2; overflow: hidden; margin: -86px auto 0; width: 600px; padding: 100px 20px 20px 20px; font-family: Arial, sans-serif; font-size: 16px; color: #fff; line-height: 20px; background-color: #181818; border-top: 2px solid #4675b8; }
 .pf-info > li { display: none; height: 100%; width: 100%; text-align: center; }
