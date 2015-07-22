@@ -531,7 +531,6 @@ header
 			transition: all 0.5s
 			text
 				fill: rgba(255,255,255,0)
-				text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
 				transition: fill 0.5s
 	&:hover
 		svg
@@ -539,6 +538,7 @@ header
 				fill: rgba(70, 117, 184, 0.5)
 				transition: all 0.5s
 				text
+					text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
 					fill: rgba(255,255,255,1)
 					transition: fill 0.5s
 	.pf-text
@@ -565,11 +565,47 @@ header
 		stoke-width: 2
 		stroke: $blue
 .pf-slide
+	padding-bottom: 40px
 	> .row
 		position: relative
 		& + .row
+			.pf-slide__in
+				margin-top: -50px
+			& + .row
+				display: none
+	.btn-hide
+		position: absolute
+		display: none
+		bottom: 0
+		right: 0
+		font-size: 30px
+		width: 40px
+		height: 30px
+		transform: rotate(-90deg)
+		background-color: transparent
+		transition: transform 0.3s
+		&:hover
+			transform: rotate(-90deg) scale(1.4,1.4)
+			transition: transform 0.3s
+		.icon-dark
 			position: relative
-			top: -50px
+			top: -30px
+			left: 7px
+			color: $black
+		.icon-blue
+			color: $blue
+	.btn-more
+		position: absolute
+		bottom: 0
+		left: 50%
+		margin-left: -120px
+		width: 240px
+		height: 32px
+		background-color: $blue
+		color: #fff
+		line-height: 32px
+		&:hover
+			background-color: darken($blue,20)
 .pf-info
 	position: relative
 	z-index: 2
