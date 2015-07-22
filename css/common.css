@@ -135,10 +135,10 @@ header { min-width: 970px; }
 .pf-slider-for .slick-prev:hover span, .pf-slider-for .slick-next:hover span { -webkit-transform: scale(1.5, 1.5); -ms-transform: scale(1.5, 1.5); transform: scale(1.5, 1.5); -webkit-transition: all 0.3s; transition: all 0.3s; }
 .pf-slider-for .slick-prev { left: -107px; }
 .pf-slider-for .slick-prev:before { content: none; }
-.pf-slider-for .slick-prev .icon-blue { position: relative; left: -22px; margin-left: -22px; }
+.pf-slider-for .slick-prev .icon-blue { position: relative; left: -22px; margin-left: -22px; line-height: 40px; }
 .pf-slider-for .slick-next { right: -50px; }
 .pf-slider-for .slick-next:before { content: none; }
-.pf-slider-for .slick-next .icon-dark { position: relative; left: -22px; margin-left: -22px; }
+.pf-slider-for .slick-next .icon-dark { position: relative; left: -22px; margin-left: -22px; line-height: 40px; }
 .pf-slider-for .slick-slide { position: relative; text-align: center; height: 112px; cursor: pointer; -webkit-transition: all 0.7s; transition: all 0.7s; stroke-width: 2; }
 .pf-slider-for .slick-slide.slick-scale { -webkit-transform: scale(1.5, 1.5); -ms-transform: scale(1.5, 1.5); transform: scale(1.5, 1.5); -webkit-transition: all 0.7s; transition: all 0.7s; }
 .pf-slider-for .slick-slide.slick-scale polygon { stroke-width: 1.3; }
