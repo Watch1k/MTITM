@@ -410,6 +410,7 @@ header
 		.slider-close
 			display: none
 			position: absolute
+			z-index: 10
 			bottom: -30px
 			right: 50px
 			font-size: 30px
@@ -518,7 +519,8 @@ header
 			height: 112px
 			margin: 0 auto
 .pf-slider
-	margin: 50px auto 0
+	margin: 0 auto
+	padding-top: 50px
 	width: 866px
 .pf-slide__in
 	position: relative
@@ -569,7 +571,6 @@ header
 .pf-slide
 	padding-bottom: 40px
 	> .row
-		position: relative
 		& + .row
 			.pf-slide__in
 				margin-top: -50px
@@ -577,7 +578,7 @@ header
 				display: none
 				.pf-slide__in
 					margin-top: 0
-					transition: all 0.5s
+					transition: all 0.4s
 	.btn-hide
 		position: absolute
 		display: none

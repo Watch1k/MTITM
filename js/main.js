@@ -70,10 +70,14 @@ $(document).ready(function(){
 		$('.pf-info > li').removeClass('active');
 		$('.pf-info > li').eq(nextSlide).addClass('active');
 		$('.pf-slide.slick-slide').eq(currentSlide).children('.row + .row + .row').fadeOut();
-		// $('.pf-slide.slick-slide').eq(currentSlide).find('svg').each(function(){
-		// 	$(this).fadeToggle();
-		// 	$(this).fadeToggle();
-		// });
+		$('.btn-more').siblings('.row + .row + .row').find('.pf-slide__in').css('margin-top', '0');
+		$('.btn-more').fadeIn();
+		// refresh SVG
+		setTimeout(function(){
+			$('.pf-slide.slick-slide').find('svg').hide();
+			$('.pf-slide.slick-slide').find('svg').get(0).offsetHeight; // no need to store this anywhere, the reference is enough
+			$('.pf-slide.slick-slide').find('svg').show();
+		}, 410);
 		$('.btn-hide').fadeOut();
 		eqRow = 2;
 	});
@@ -94,6 +98,7 @@ $(document).ready(function(){
 		$('.pf-slider').get(0).slick.setPosition(); // fix for display none
 		$('.slider-close').fadeIn('slow');
 		$('.portfolio_mid_3').addClass('active');
+		$(window).scrollTo('#pf-slider', 1000, {offset: -35});
 	});
 
 	// close slide
@@ -102,6 +107,7 @@ $(document).ready(function(){
 		$('.pf-slide.slick-slide > .row + .row + .row').fadeOut();
 		$('.pf-slider').slideUp('slow');
 		$('.portfolio_mid_3').removeClass('active');
+		$(window).scrollTo('#pf-slider-for', 1000, {offset: -100});
 		eqRow = 2;
 	});
 
@@ -152,30 +158,31 @@ $(document).ready(function(){
 		$(this).siblings('.btn-hide').fadeIn();
 		$(this).siblings('.row').eq(eqRow).slideDown();
 		setTimeout(function(){
-			$('.btn-more').siblings('.row').eq(eqRow - 2).find('.pf-slide__in').css('margin-top', '-50px');
+			$('.btn-more').each(function(){
+				$(this).siblings('.row').eq(eqRow - 1).find('.pf-slide__in').css('margin-top', '-50px').addClass('LOLOLOL');
+			});
 		}, 400);
-		$(this).siblings('.row').eq(eqRow + 1).slideDown();
-		setTimeout(function(){
-			$('.btn-more').siblings('.row').eq(eqRow - 1).find('.pf-slide__in').css('margin-top', '-50px');
-		}, 400);
-		$(window).scrollTo('+=500px', 1000);
-		eqRow += 2;
+		$(window).scrollTo('+=250px', 1000);
+		eqRow += 1;
 		if ($(this).siblings('.row').eq(eqRow + 1).length > 0) {
 		} else {
 			$(this).fadeOut();
 		};	
 	});
+
 	$('.btn-hide').on('click', function(){
-		eqRow -= 2;
+		eqRow -= 1;
 		$(this).siblings('.row').eq(eqRow).slideUp();
-		$('.btn-more').siblings('.row').eq(eqRow).find('.pf-slide__in').css('margin-top', '0');
-		$(this).siblings('.row').eq(eqRow + 1).slideUp();
-		$('.btn-more').siblings('.row').eq(eqRow + 1).find('.pf-slide__in').css('margin-top', '0');
-		// $(this).siblings('.row').find('svg').each(function(){
-		// 	$(this).fadeToggle();
-		// 	$(this).fadeToggle();
-		// });
-		$(window).scrollTo('-=500px', 1000);
+		$('.btn-more').each(function(){
+			$(this).siblings('.row').eq(eqRow).find('.pf-slide__in').css('margin-top', '0');
+		});
+		// refresh SVG
+		setTimeout(function(){
+			$('.pf-slide.slick-slide').find('svg').hide();
+			$('.pf-slide.slick-slide').find('svg').get(0).offsetHeight; // no need to store this anywhere, the reference is enough
+			$('.pf-slide.slick-slide').find('svg').show();
+		}, 410);
+		$(window).scrollTo('-=250px', 1000);
 		$('.btn-more').fadeIn();
 		if (eqRow < 3) {
 			$(this).fadeOut();
